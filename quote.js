@@ -5,6 +5,8 @@ if("undefined"!=typeof Bookmark){
 }else{
     var Bookmark={};
 	(function(){	    
+	   alert('function');
+		
 		function c(a){//获取ID
 	        alert('c');
 			if(typeof(a)=="string"){
