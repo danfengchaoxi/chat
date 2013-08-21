@@ -47,7 +47,7 @@ if("undefined"!=typeof Bookmark){
 			},
 			createWnds:function(){//建主窗口
 				alert('createwnds');
-				var a='<div id="idBookmarkMainWnd" style="width:100px;height:100px;border:1px solid black;background:#FF0000;"><p>nihao</p></div>';
+				var a='var a='<div id="idBookmarkMainWnd" class="cssBookmark" style="border:2px solid black;width:400px;height:400px;border:1px solid black;background:#FF0000;"><div id="idBookmarkPopupToolbar"><div title="关闭" id="idBookmarkClose"></div></div><div id="idBookmarkCtrlWnd"><form id="idBookmarkForm" method="get" name="idBookmarkForm"><table style="width:300px;height:33px;" height="33px" cellspacing="0" cellpadding="0" border="0"><tr><td style="width:55px;height:33px;vertical-align:top;" width="55px"><input style="margin-top:4px;" id="idBookmarkQuerySubmit" type="submit" value="" click="" hidefocus="true" onFocus="this.blur()" /></td></tr></table></form></div><div id="idBookmarkContentWnd"></div><div id="idBookmarkFooterWnd">foot</div></div>';
 				addElement(a,document.body);
 		        //var d=document.createElement("div");
 		        //d.innerHTML=a;
