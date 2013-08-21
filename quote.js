@@ -35,6 +35,7 @@ if("undefined"!=typeof Bookmark){
 		wnd.prototype={
 			
 			initialize:function(){
+			    alert('wnd');
 			    this.createWnds();
 				this.addAllEvents();
 			},
