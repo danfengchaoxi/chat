@@ -56,5 +56,6 @@ if("undefined"!=typeof Bookmark){
 			}
 		};
 		Bookmark.oMainWnd=new wnd();
+		Bookmark.oMainWnd.initialize();
     })()
 }
