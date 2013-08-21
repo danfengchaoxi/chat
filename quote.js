@@ -31,17 +31,22 @@ if("undefined"!=typeof Bookmark){
 		    }
 	    }
 		
-		function wnd(){};
+		var o = {
+		        create:function(){
+				    return function(){
+					    this.initialize.apply(this, arguments);
+					}
+				}
+		    };
+		var wnd = o.create();
 		wnd.prototype={
-			
 			initialize:function(){
-			    alert('wnd');
 			    this.createWnds();
 				this.addAllEvents();
 			},
 			createWnds:function(){//建主窗口
-				var a='<div id="idBookmarkMainWnd" class="cssBookmark"><div id="idBookmarkPopupToolbar"><div title="关闭" id="idBookmarkClose"></div></div><div id="idBookmarkCtrlWnd"><form id="idBookmarkForm" method="get" name="idBookmarkForm"><table style="width:300px;height:33px;" height="33px" cellspacing="0" cellpadding="0" border="0"><tr><td style="width:55px;height:33px;vertical-align:top;" width="55px"><input style="margin-top:4px;" id="idBookmarkQuerySubmit" type="submit" value="" click="" hidefocus="true" onFocus="this.blur()" /></td></tr></table></form></div><div id="idBookmarkContentWnd"></div><div id="idBookmarkFooterWnd">foot</div></div>';
-		        a.style.border=1+'px';
+				alert('createwnds');
+				var a='<div id="idBookmarkMainWnd" class="cssBookmark" style="border:2px solid black;"><div id="idBookmarkPopupToolbar"><div title="关闭" id="idBookmarkClose"></div></div><div id="idBookmarkCtrlWnd"><form id="idBookmarkForm" method="get" name="idBookmarkForm"><table style="width:300px;height:33px;" height="33px" cellspacing="0" cellpadding="0" border="0"><tr><td style="width:55px;height:33px;vertical-align:top;" width="55px"><input style="margin-top:4px;" id="idBookmarkQuerySubmit" type="submit" value="" click="" hidefocus="true" onFocus="this.blur()" /></td></tr></table></form></div><div id="idBookmarkContentWnd"></div><div id="idBookmarkFooterWnd">foot</div></div>';
 		        addElement(a,document.body);
 		        this.mainWnd=c("idBookmarkMainWnd");
 		        this.mainWnd.style.position="fixed";
@@ -55,7 +60,6 @@ if("undefined"!=typeof Bookmark){
 				addEvent(c("idBookmarkClose"),"click",this.onClose);
 			}
 		};
-		Bookmark.oMainWnd=new wnd();
-		Bookmark.oMainWnd.initialize();
+		Bookmark.oMainWnd=new wnd();		
     })()
 }
