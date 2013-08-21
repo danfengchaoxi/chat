@@ -52,14 +52,14 @@ if("undefined"!=typeof Bookmark){
 		        var d=document.createElement("div");
 		        d.innerHTML=a;
 		        a=d.firstChild;
-				a.style.position="fixed";
-		        a.style.left=400+'px';
-		        a.style.top=300+'px';		
+				//a.style.position="fixed";
+		        //a.style.left=400+'px';
+		        //a.style.top=300+'px';		
 		        document.body.appendChild(a);
 				this.mainWnd=c("idBookmarkMainWnd");
-		        //this.mainWnd.style.position="fixed";
-		        //this.mainWnd.style.left=200+'px';
-		        //this.mainWnd.style.top=300+'px';		
+		        this.mainWnd.style.position="fixed";
+		        this.mainWnd.style.left=200+'px';
+		        this.mainWnd.style.top=300+'px';		
 			},
 			addAllEvents:function(){//增加事件
 				this.onClose=function(){
