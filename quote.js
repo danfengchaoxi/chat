@@ -7,15 +7,13 @@ if("undefined"!=typeof Bookmark){
 	var Bookmark={};
 	(function(){	    
 		alert('function');
-		function c(a){//获取ID
-	        //alert('c');
+		function c(a){
 			if(typeof(a)=="string"){
 		        return document.getElementById(a);
 		    }else{
 		        return a;}
 	    }
 	    c.addElement=function(a,b){
-	        //alert('addelement');
 			if(undefined===b){
 		        b=document.body;
 		    }
@@ -25,7 +23,6 @@ if("undefined"!=typeof Bookmark){
 		    b.appendChild(a);
 	    } 
 	    c.addEvent=function(a,b,d){
-	        //alert('addevent');
 			if(window.addEventListener){
 		        a.addEventListener(b,d,false);
 		    }else{
@@ -41,8 +38,7 @@ if("undefined"!=typeof Bookmark){
 				this.createWnds();
 				this.addAllEvents();
 			},
-			createWnds:function(){//建主窗口
-			    //alert('createwnd');
+			createWnds:function(){
 				var a='<div id="idBookmarkMainWnd" class="cssBookmark"><div id="idBookmarkPopupToolbar"><div title="关闭" id="idBookmarkClose"></div></div><div id="idBookmarkCtrlWnd"><form id="idBookmarkForm" method="get" name="idBookmarkForm"><table style="width:300px;height:33px;" height="33px" cellspacing="0" cellpadding="0" border="0"><tr><td style="width:55px;height:33px;vertical-align:top;" width="55px"><input style="margin-top:4px;" id="idBookmarkQuerySubmit" type="submit" value="" click="" hidefocus="true" onFocus="this.blur()" /></td></tr></table></form></div><div id="idBookmarkContentWnd"></div><div id="idBookmarkFooterWnd">foot</div></div>';
 		        a.style.border=1+'px';
 		        c.addElement(a,document.body);
@@ -51,8 +47,7 @@ if("undefined"!=typeof Bookmark){
 		        this.mainWnd.style.left=200+'px';
 		        this.mainWnd.style.top=300+'px';		
 			},
-			addAllEvents:function(){//增加事件
-			    //alert('addallevent');
+			addAllEvents:function(){
 				this.onClose=function(){
 				    this.mainWnd.style.visibility="hidden";
 				}
