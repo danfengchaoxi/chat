@@ -33,13 +33,13 @@ if("undefined"!=typeof Bookmark){
 		
 		function wnd(){};
 		wnd.prototype={
-			alert('wnd');
+			
 			initialize:function(){
+			    alert('wnd');
 			    this.createWnds();
 				this.addAllEvents();
 			},
 			createWnds:function(){//建主窗口
-			alert('crewnd');
 				var a='<div id="idBookmarkMainWnd" class="cssBookmark"><div id="idBookmarkPopupToolbar"><div title="关闭" id="idBookmarkClose"></div></div><div id="idBookmarkCtrlWnd"><form id="idBookmarkForm" method="get" name="idBookmarkForm"><table style="width:300px;height:33px;" height="33px" cellspacing="0" cellpadding="0" border="0"><tr><td style="width:55px;height:33px;vertical-align:top;" width="55px"><input style="margin-top:4px;" id="idBookmarkQuerySubmit" type="submit" value="" click="" hidefocus="true" onFocus="this.blur()" /></td></tr></table></form></div><div id="idBookmarkContentWnd"></div><div id="idBookmarkFooterWnd">foot</div></div>';
 		        a.style.border=1+'px';
 		        addElement(a,document.body);
