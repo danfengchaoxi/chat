@@ -48,14 +48,14 @@ if("undefined"!=typeof Bookmark){
 			createWnds:function(){//建主窗口
 				alert('createwnds');
 				var a='<div id="idBookmarkMainWnd" style="width:100px;height:100px;border:1px solid black;background:#FF0000;"><p>nihao</p></div>';
-				//addElement(a,document.body);
-		        var d=document.createElement("div");
-		        d.innerHTML=a;
-		        a=d.firstChild;
+				addElement(a,document.body);
+		        //var d=document.createElement("div");
+		        //d.innerHTML=a;
+		       // a=d.firstChild;
 				//a.style.position="fixed";
 		        //a.style.left=400+'px';
 		        //a.style.top=300+'px';		
-		        document.body.appendChild(a);
+		        //document.body.appendChild(a);
 				this.mainWnd=c("idBookmarkMainWnd");
 		        this.mainWnd.style.position="fixed";
 		        this.mainWnd.style.left=200+'px';
