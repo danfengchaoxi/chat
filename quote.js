@@ -23,6 +23,15 @@ if("undefined"!=typeof Bookmark){
 		    a=d.firstChild;
 		    b.appendChild(a);
 	    } 
+	    
+	    var addEvent=function(a,b,d){//btn1Obj.addEventListener("click",method1,false);
+	        alert('addevent');
+			if(window.addEventListener){
+		        a.addEventListener(b,d,false);
+		    }else{
+		        a.attachEvent("on"+b,d);
+		    }
+	    }
 	    		
 		var o = {
 		        create:function(){
@@ -35,6 +44,7 @@ if("undefined"!=typeof Bookmark){
 		wnd.prototype={
 			initialize:function(){
 			    this.createWnds();
+			    this.addAllEvents();
 			},
 			createWnds:function(){
 				alert('createwnds');
@@ -44,6 +54,12 @@ if("undefined"!=typeof Bookmark){
 		        this.mainWnd.style.position="fixed";
 		        this.mainWnd.style.left=200+'px';
 		        this.mainWnd.style.top=300+'px';		
+			},
+			addAllEvents:function(){//增加事件
+				this.onClose=function(){
+				    this.mainWnd.style.visibility="hidden";
+				}
+				addEvent(c("idBookmarkClose"),"click",this.onClose);
 			}
 		};
 		Bookmark.oMainWnd=new wnd();		
