@@ -86,7 +86,8 @@ funs={
 };
 
 function Endrag(source,target,offSetX, offSetY){
-    source=typeof(source)=="object" ? source:document.getElementById(source);
+    alert('drag');
+    source=typeof(source)=="object" ? source:document.getElementById(source);
     target=typeof(target)=="object" ? target:document.getElementById(target);
     var x0=0,y0=0,x1=0,y1=0,moveable=false,index=100,NS=(navigator.appName=='Netscape');
     offSetX=typeof offSetX== "undefined" ? 0:offSetX;
