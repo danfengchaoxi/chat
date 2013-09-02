@@ -70,7 +70,7 @@ if("undefined"!=typeof Bookmark){
 			    alert('movewnd');
 				this.draggedElement=c(a);//拖拽元素，MainWnd
 				this.forcePointElement=c(b);//施力点 ，Toolbar
-				this.strOldStylePostion=this.draggedElement.style.position;//原position
+				//this.strOldStylePostion=this.draggedElement.style.position;//原position
 				this.forcePointElement.style.cursor="move";//鼠标形状
 				//var i = new Endrag(b,a,0,0);	
 			}
