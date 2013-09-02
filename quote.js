@@ -129,9 +129,8 @@ source=typeof(source)=="object" ? source:document.getElementById(source);
 				this.forcePointElement=c(b);//施力点 ，Toolbar
 				this.strOldStylePostion=this.draggedElement.style.position;//原position
 				this.forcePointElement.style.cursor="move";//鼠标形状
-				Endrag(b,a,0,0);	
+				var i = new Endrag(b,a,0,0);	
 			}
-			//addEvent(c("idBookmarkClose"),"click",this.onClose);
 		};
 		
 		
