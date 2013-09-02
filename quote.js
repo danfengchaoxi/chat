@@ -124,7 +124,7 @@ function Endrag(source,target,offSetX, offSetY){
 		var moveWnd = o.create();
 		moveWnd.prototype = {
 		    initialize:function(a,b){
-			    
+			    alert('movewnd');
 				this.draggedElement=c(a);//拖拽元素，MainWnd
 				this.forcePointElement=c(b);//施力点 ，Toolbar
 				this.strOldStylePostion=this.draggedElement.style.position;//原position
